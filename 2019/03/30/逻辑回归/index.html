@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="今天天气好,下午去爬山@@@">
+<meta name="description" content="前言&amp;emsp;&amp;emsp;逻辑回归算法不单单模型简单、优化速度快，同时也可以辅助特征筛选。这篇博客分为原理、实现、应用三个部分。在原理部分，我们结合线性回归介绍了逻辑回归的原理，这包括其模型、损失函数、优化算法；在实现部分，我们介绍了如何使用Python实现一个逻辑回归算法,并使用不同损失函数与优化算法来训练同一个逻辑回归模型；最后介绍逻辑回归的应用。 逻辑回归算法的原理&amp;emsp;&amp;emsp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="my first blog">
-<meta property="og:url" content="https://github.com/huichengxiao/2019/03/21/my-first-blog/index.html">
+<meta property="og:title" content="逻辑回归">
+<meta property="og:url" content="https://github.com/huichengxiao/2019/03/30/逻辑回归/index.html">
 <meta property="og:site_name" content="huichengxiao&#39;s blog">
-<meta property="og:description" content="今天天气好,下午去爬山@@@">
+<meta property="og:description" content="前言&amp;emsp;&amp;emsp;逻辑回归算法不单单模型简单、优化速度快，同时也可以辅助特征筛选。这篇博客分为原理、实现、应用三个部分。在原理部分，我们结合线性回归介绍了逻辑回归的原理，这包括其模型、损失函数、优化算法；在实现部分，我们介绍了如何使用Python实现一个逻辑回归算法,并使用不同损失函数与优化算法来训练同一个逻辑回归模型；最后介绍逻辑回归的应用。 逻辑回归算法的原理&amp;emsp;&amp;emsp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-29T16:21:04.952Z">
+<meta property="og:updated_time" content="2019-03-29T16:25:09.003Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my first blog">
-<meta name="twitter:description" content="今天天气好,下午去爬山@@@">
+<meta name="twitter:title" content="逻辑回归">
+<meta name="twitter:description" content="前言&amp;emsp;&amp;emsp;逻辑回归算法不单单模型简单、优化速度快，同时也可以辅助特征筛选。这篇博客分为原理、实现、应用三个部分。在原理部分，我们结合线性回归介绍了逻辑回归的原理，这包括其模型、损失函数、优化算法；在实现部分，我们介绍了如何使用Python实现一个逻辑回归算法,并使用不同损失函数与优化算法来训练同一个逻辑回归模型；最后介绍逻辑回归的应用。 逻辑回归算法的原理&amp;emsp;&amp;emsp;">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/huichengxiao/2019/03/21/my-first-blog/">
+  <link rel="canonical" href="https://github.com/huichengxiao/2019/03/30/逻辑回归/">
 
 
 
 
 
-  <title>my first blog | huichengxiao's blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>逻辑回归 | huichengxiao's blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/huichengxiao/2019/03/21/my-first-blog/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/huichengxiao/2019/03/30/逻辑回归/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="huichengxiao">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">my first blog</h1>
+          <h1 class="post-title" itemprop="name headline">逻辑回归</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-21T20:18:55+08:00">
-                2019-03-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-30T08:22:36+08:00">
+                2019-03-30
               </time>
             
 
@@ -271,28 +271,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hello/" itemprop="url" rel="index">
-                    <span itemprop="name">hello</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -321,8 +299,11 @@
       
 
       
-        <p>今天天气好,下午去爬山<br><br>@@@</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;逻辑回归算法不单单模型简单、优化速度快，同时也可以辅助特征筛选。这篇博客分为原理、实现、应用三个部分。在原理部分，我们结合线性回归介绍了逻辑回归的原理，这包括其模型、损失函数、优化算法；在实现部分，我们介绍了如何使用Python实现一个逻辑回归算法,并使用不同损失函数与优化算法来训练同一个逻辑回归模型；最后介绍逻辑回归的应用。</p>
+<h2 id="逻辑回归算法的原理"><a href="#逻辑回归算法的原理" class="headerlink" title="逻辑回归算法的原理"></a>逻辑回归算法的原理</h2><p>&emsp;&emsp;<br>$<br>f(x)=sin(x)<br>f(x) = cos(x)<br>$</p>
+<p>测试普通上传功能</p>
 
+<h3 id="逻辑回归算法损失函数"><a href="#逻辑回归算法损失函数" class="headerlink" title="逻辑回归算法损失函数"></a>逻辑回归算法损失函数</h3><h3 id="逻辑回归算法的优化算法"><a href="#逻辑回归算法的优化算法" class="headerlink" title="逻辑回归算法的优化算法"></a>逻辑回归算法的优化算法</h3><h2 id="逻辑回归算法的实现"><a href="#逻辑回归算法的实现" class="headerlink" title="逻辑回归算法的实现"></a>逻辑回归算法的实现</h2><h2 id="逻辑回归算法的应用"><a href="#逻辑回归算法的应用" class="headerlink" title="逻辑回归算法的应用"></a>逻辑回归算法的应用</h2>
       
     </div>
     
@@ -346,15 +327,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/03/30/logistic-regression - 副本/" rel="next" title="逻辑回归算法">
+                <i class="fa fa-chevron-left"></i> 逻辑回归算法
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/30/logistic-regression/" rel="prev" title="逻辑回归算法">
-                逻辑回归算法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -406,8 +387,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -458,6 +448,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑回归算法的原理"><span class="nav-number">2.</span> <span class="nav-text">逻辑回归算法的原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑回归算法损失函数"><span class="nav-number">2.1.</span> <span class="nav-text">逻辑回归算法损失函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑回归算法的优化算法"><span class="nav-number">2.2.</span> <span class="nav-text">逻辑回归算法的优化算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑回归算法的实现"><span class="nav-number">3.</span> <span class="nav-text">逻辑回归算法的实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑回归算法的应用"><span class="nav-number">4.</span> <span class="nav-text">逻辑回归算法的应用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
