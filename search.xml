@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[逻辑回归]]></title>
+    <url>%2F2019%2F03%2F30%2F%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%2F</url>
+    <content type="text"><![CDATA[前言&emsp;&emsp;逻辑回归算法不单单模型简单、优化速度快，同时也可以辅助特征筛选。这篇博客分为原理、实现、应用三个部分。在原理部分，我们结合线性回归介绍了逻辑回归的原理，这包括其模型、损失函数、优化算法；在实现部分，我们介绍了如何使用Python实现一个逻辑回归算法,并使用不同损失函数与优化算法来训练同一个逻辑回归模型；最后介绍逻辑回归的应用。 逻辑回归算法的原理&emsp;&emsp; 测试删除.git-&gt; -&gt; 测试备份是否可行 逻辑回归算法损失函数逻辑回归算法的优化算法逻辑回归算法的实现逻辑回归算法的应用]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+</search>
